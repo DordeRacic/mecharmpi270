@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> GamePad Test</title>
+</head>
+<body>
+<h1> Gamepad</h1>
+<pre id="output"></pre>
+<!--This script is just meant to test the connection to the gamepad
+    on the html
+    when it is plugged in into the machine.
+    Further controls need to be added-->
+<script>
+    window.addEventListener('gamepadconnected', (e) => {
+      console.log(
+        "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+        e.gamepad.index,
+        e.gamepad.id,
+        e.gamepad.buttons.length,
+        e.gamepad.axes.length
+      );
+    });
+</script>
+
+</body>
+</html>
